@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f172a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: #020617;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Полная блокировка и скрытие виджета с треугольником */
+#vercel-preview-feedback, 
+[id*="vercel-preview"],
+.vercel-preview-indicator,
+div[data-vercel-preview-feedback],
+iframe[src*="vercel"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
